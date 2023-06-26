@@ -66,6 +66,9 @@ function dragDrop() {
 }
 
 function swapItems(dragStartIndex, dragEndIndex) {
+    listItems.forEach((listItem) => {
+        listItem.classList.remove("wrong");
+    });
     const firstItem = listItems[dragStartIndex].querySelector(
         ".list-item__draggable"
     );
@@ -95,3 +98,18 @@ function addEventListeners() {
         draggbleItem.addEventListener("drop", dragDrop);
     });
 }
+
+checkBtn.addEventListener("click", () => {
+    listItems.forEach((listItem, i) => {
+        const animeName = listItem.querySelector(
+            ".list-item__draggable"
+        ).innerText;
+
+        if (animeName === mostPopularAnimes[i]) {
+            listItem.classList.remove("wrong");
+            listItem.classList.add("correct");
+        } else {
+            listItem.classList.add("wrong");
+        }
+    });
+});

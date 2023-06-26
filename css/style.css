@@ -69,4 +69,14 @@ body {
   padding: 10px 20px;
   cursor: pointer;
   margin-top: 20px;
+}
+
+.correct {
+  color: green;
+  transition: color 0.2s ease-in-out;
+}
+
+.wrong {
+  color: red;
+  transition: color 0.2s ease-in-out;
 }/*# sourceMappingURL=style.css.map */
