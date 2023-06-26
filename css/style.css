@@ -57,6 +57,9 @@ body {
 .list-item__draggable-person-name {
   margin: 0 20px 0 0;
 }
+.list-item.over {
+  background-color: #eaeaea;
+}
 
 .check-btn {
   background-color: grey;
